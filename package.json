@@ -25,8 +25,9 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
-    "predeploy": "npm run build-storybook",
-    "deploy": "gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -49,8 +50,8 @@
     "@storybook/addons": "^5.3.13",
     "@storybook/preset-create-react-app": "^1.5.2",
     "@storybook/react": "^5.3.13",
+    "@storybook/storybook-deployer": "^2.8.3",
     "gh-pages": "^2.2.0"
-  }, 
+  },
   "homepage": "https://a-nakajima-at-shokuryu.github.io/daikyo-proto1-kai/"
 }
-

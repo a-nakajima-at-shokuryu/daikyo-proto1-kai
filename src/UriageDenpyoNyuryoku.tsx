@@ -55,7 +55,7 @@ export default class UriageDenpyoNyuryoku extends Component {
         return (
             <div>
                 <Grid container>
-                    <Grid item xs={12}><h1>売上伝票 入力(枚数)＜デプロイチェック＞</h1></Grid>
+                    <Grid item xs={12}><h1>売上伝票 入力(枚数)＜Storybook deploy＞</h1></Grid>
                 </Grid>
                 <Grid container>
                     <Grid item xs={3}>
