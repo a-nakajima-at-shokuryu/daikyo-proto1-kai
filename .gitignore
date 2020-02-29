@@ -2,5 +2,6 @@ node_modules/
 vscode.bat
 
 yarn.lock
+yarn-error.log*
 build/
 storybook-static/
