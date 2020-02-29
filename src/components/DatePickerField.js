@@ -66,6 +66,8 @@ const DatePickerField = ({
       style: { color: dayColor }, 
     });
   };
+
+  console.log('addon-console test!');
   
   return (
     <MuiThemeProvider theme={customizedTheme}>
