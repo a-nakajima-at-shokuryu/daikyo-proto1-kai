@@ -3,3 +3,4 @@ vscode.bat
 
 yarn.lock
 build/
+storybook-static/
