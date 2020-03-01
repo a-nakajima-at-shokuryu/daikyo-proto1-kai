@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import DatePickerField from './DatePickerField'; 
 
 export default {
-  title: 'DatePickerField', 
+  title: '日付選択フィールド', 
 };
 
 export const Default = () => {
