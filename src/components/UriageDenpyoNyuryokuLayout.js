@@ -14,6 +14,8 @@ import SelectBox from './SelectBox';
 import RadioBox from './RadioBox';
 import DatePickerField from './DatePickerField';
 
+import UriageMeisai from './UriageMeisai'; 
+
 export const emptyOptions = {
   value: null, 
   onChange: a => a, 
@@ -96,7 +98,7 @@ const UriageDenpyoNyuryokuLayout = ({
         <Grid item xs={2}><ShoriButton {...shoriButton} /></Grid>
       </Grid>
       <Grid container spacing={2}>
-        <Grid item xs={12}><Meisai {...meisai} /></Grid>
+        <Grid item xs={12}><UriageMeisai {...meisai} /></Grid>
       </Grid>
     </MuiThemeProvider>
   )
@@ -182,14 +184,5 @@ const Meihenbi = props => <Hiduke {...props}/>;
 const Tokuno = props => <Select {...props}/>; 
 const Zeiku = props => <Select {...props}/>; 
 const ShoriButton = props => <Submit {...props}/>; 
-const Meisai = props => <Select {...props}/>; 
 
 
-const Textbox = ({
-  label, 
-}) => {
-  return (
-    <TextField
-    />
-  );
-};

@@ -8,63 +8,84 @@ export default {
 
 export const Default = () => {
   const title = '売上伝票　入力（枚数）'
-  const busho = useOptions(null, {
-    label: '部署', 
-    options: [
-      { id: '40', name: '営業所Ｃ', }, 
-      { id: '50', name: '営業所Ｄ', }, 
-      { id: '60', name: '営業所Ｅ', }, 
-    ], 
-  });
-  const tanto = useOptions(null, {
-    label: '担当', 
-    options: [
-      { id: '23', name: '中野', }, 
-      { id: '24', name: '大村', }, 
-      { id: '25', name: '小山', }, 
-    ], 
-  });
-  const baibai = useOptions(null, {
-    label: '売買区分', 
-    options: [
-      { id: '0', name: '外部', }, 
-      { id: '1', name: '内部', }, 
-    ], 
-  });
-  const azukari = useOptions(null, {
-    label: '預り区分', 
-    options: [
-      { id: '0', name: '通常', }, 
-      { id: '1', name: '預り', }, 
-    ], 
-  });
-  const henpin = useOptions(null, {
-    label: '返品区分', 
-    options: [
-      { id: '0', name: '通常', }, 
-      { id: '1', name: '返品', }, 
-    ], 
-  });
-  const shoribi = useOptions(null, {
+
+  const busho = useOptions(
+    { id: '40', name: '営業所Ｃ', }, {
+      label: '部署', 
+      options: [
+        { id: '40', name: '営業所Ｃ', }, 
+        { id: '50', name: '営業所Ｄ', }, 
+        { id: '60', name: '営業所Ｅ', }, 
+      ], 
+    });
+  
+    const tanto = useOptions(
+    { id: '23', name: '中野', }, {
+      label: '担当', 
+      options: [
+        { id: '23', name: '中野', }, 
+        { id: '24', name: '大村', }, 
+        { id: '25', name: '小山', }, 
+      ], 
+    });
+  
+    const baibai = useOptions(
+    { id: '0', name: '外部', }, {
+      label: '売買区分', 
+      options: [
+        { id: '0', name: '外部', }, 
+        { id: '1', name: '内部', }, 
+      ], 
+    });
+
+  const azukari = useOptions(
+    { id: '0', name: '通常', }, {
+      label: '預り区分', 
+      options: [
+        { id: '0', name: '通常', }, 
+        { id: '1', name: '預り', }, 
+      ], 
+    });
+
+  const henpin = useOptions(
+    { id: '0', name: '通常', }, {
+      label: '返品区分', 
+      options: [
+        { id: '0', name: '通常', }, 
+        { id: '1', name: '返品', }, 
+      ], 
+    });
+
+  const shoribi = useOptions(Date.now(), {
     label: '処理日', 
   });
-  const hasseibi = useOptions(null, {
+
+  const hasseibi = useOptions(Date.now(), {
     label: '発生日', 
   });
-  const furikaebi = useOptions(null, {
+
+  const furikaebi = useOptions(Date.now(), {
     label: '振替日', 
   });
-  const nissu = useOptions(null, {
+
+  const nissu = useOptions(2, {
     label: '日数', 
   });
-  const tokunoOption = useOptions(null, {
-    label: '得意先', 
-    options: [
-      { id: '0', name: '担当', }, 
-      { id: '1', name: '全件', }, 
-    ], 
-  });
-  const haitanto = useOptions(null, {
+  
+  const tokunoOption = useOptions(
+    { id: '0', name: '担当', }, {
+      label: '得意先', 
+      options: [
+        { id: '0', name: '担当', }, 
+        { id: '1', name: '全件', }, 
+      ], 
+    });
+
+  const haitanto = useOptions({
+    id: 1, 
+    name: 'XXXXXXXXXXXXXXXX - 1'
+  }
+  , {
     label: '配担当', 
     options: [
       ...Array(10).fill(0).map((_, i) => ({
@@ -73,13 +94,19 @@ export const Default = () => {
       }))
     ], 
   });
-  const shukkobi = useOptions(null, {
+
+  const shukkobi = useOptions(Date.now(), {
     label: '出庫日', 
   });
-  const meihenbi = useOptions(null, {
+
+  const meihenbi = useOptions(Date.now(), {
     label: '名変日', 
   });
-  const tokuno = useOptions(null, {
+
+  const tokuno = useOptions({
+    id: 1001, 
+    name: 'XXXXXXXXXXXXXXXXXXXXXXX - 1001'
+  }, {
     label: '得意先', 
     options: [
       ...Array(20).fill(0).map((_, i) => ({
@@ -88,21 +115,25 @@ export const Default = () => {
       })), 
     ], 
   }); 
-  const zeiku = useOptions(null, {
-    label: '税区分', 
-    options: [
-      { id: '0', name: '外税 8%'}, 
-      { id: '1', name: '外税10%'}, 
-      { id: '2', name: '内税 8%'}, 
-      { id: '3', name: '内税10%'}, 
-    ], 
-  }); 
+
+  const zeiku = useOptions(
+    { id: '0', name: '外税 8%'}, {
+      label: '税区分', 
+      options: [
+        { id: '0', name: '外税 8%'}, 
+        { id: '1', name: '外税10%'}, 
+        { id: '2', name: '内税 8%'}, 
+        { id: '3', name: '内税10%'}, 
+      ], 
+    }); 
+
   const shoriButton = {
     label: '処理', 
     onClick: e => {
       console.log('*** submit!! ***');
     }, 
   };
+  
   return (
     <UriageDenpyoNyuryokuLayout
       {...{

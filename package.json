@@ -5,6 +5,7 @@
   "dependencies": {
     "@date-io/date-fns": "1.x",
     "@material-ui/core": "^4.9.4",
+    "@material-ui/icons": "^4.9.1",
     "@material-ui/lab": "^4.0.0-alpha.45",
     "@material-ui/pickers": "^3.2.10",
     "@testing-library/jest-dom": "^4.2.4",
@@ -15,6 +16,7 @@
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
     "date-fns": "^2.10.0",
+    "mui-datatables": "^2.14.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.4.0",
