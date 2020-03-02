@@ -63,39 +63,39 @@ const UriageDenpyoNyuryokuLayout = ({
   return (
     <MuiThemeProvider theme={theme}>
       <CssBaseline />
-      <Grid continer>
+      <Grid container spacing={2}>
         <Grid item xs={12}>
           <Typography variant="h4">
             {title}
           </Typography>
         </Grid>
       </Grid>
-      <Grid container>
-        <Grid item xs={3}><Busho className={classes.busho} {...busho} /></Grid>
-        <Grid item xs={3}><Tanto className={classes.tanto} {...tanto} /></Grid>
-        <Grid item xs={2}><Baibai className={classes.baibai} {...baibai} /></Grid>
-        <Grid item xs={2}><Azukari className={classes.azukari} {...azukari} /></Grid>
-        <Grid item xs={2}><Henpin className={classes.henpin} {...henpin} /></Grid>
+      <Grid container spacing={2}>
+        <Grid item xs={3}><Busho {...busho} /></Grid>
+        <Grid item xs={3}><Tanto {...tanto} /></Grid>
+        <Grid item xs={2}><Baibai {...baibai} /></Grid>
+        <Grid item xs={2}><Azukari {...azukari} /></Grid>
+        <Grid item xs={2}><Henpin {...henpin} /></Grid>
       </Grid>
-      <Grid container>
+      <Grid container spacing={2}>
         <Grid item xs={6}><Shoribi {...shoribi} /></Grid>
         <Grid item xs={2}><Hasseibi {...hasseibi} /></Grid>
         <Grid item xs={2}><Furikaebi {...furikaebi} /></Grid>
         <Grid item xs={2}><Nissu {...nissu} /></Grid>
       </Grid>
-      <Grid container>
+      <Grid container spacing={2}>
         <Grid item xs={3}><TokunoOption {...tokunoOption} /></Grid>
         <Grid item xs={3}><Haitanto {...haitanto} /></Grid>
         <Grid item xs={2}><Shukkobi {...shukkobi} /></Grid>
         <Grid item xs={2}><Meihenbi {...meihenbi} /></Grid>
       </Grid>
-      <Grid container>
+      <Grid container spacing={2}>
         <Grid item xs={6}><Tokuno {...tokuno} /></Grid>
         <Grid item xs={2}><Zeiku {...zeiku} /></Grid>
         <Grid item xs={2}></Grid>
         <Grid item xs={2}><ShoriButton {...shoriButton} /></Grid>
       </Grid>
-      <Grid container>
+      <Grid container spacing={2}>
         <Grid item xs={12}><Meisai {...meisai} /></Grid>
       </Grid>
     </MuiThemeProvider>
@@ -139,6 +139,33 @@ const Hiduke = ({
   );
 };
 
+const Number = ({
+  onChange, 
+  ...other 
+}) => {
+  return (
+    <TextField
+      type="number"
+      onChange={e => onChange(e.target.value)}
+      {...other}
+    />
+  );
+};
+
+const Submit = ({
+  label, 
+  ...other 
+}) => {
+  return (
+    <Button
+      variant="contained"
+      color="primary"
+      {...other}
+    >
+      {label}
+    </Button>
+  );
+};
 const Busho = props => <Select {...props}/>; 
 const Tanto = props => <Select {...props}/>; 
 const Baibai = props => <Kubun {...props}/>; 
@@ -147,14 +174,14 @@ const Henpin = props => <Kubun {...props}/>;
 const Shoribi = props => <Hiduke {...props}/>; 
 const Hasseibi = props => <Hiduke {...props}/>; 
 const Furikaebi = props => <Hiduke {...props}/>; 
-const Nissu = props => <Select {...props}/>; 
+const Nissu = props => <Number {...props}/>; 
 const TokunoOption = props => <Select {...props}/>; 
 const Haitanto = props => <Select {...props}/>; 
 const Shukkobi = props => <Hiduke {...props}/>; 
 const Meihenbi = props => <Hiduke {...props}/>; 
 const Tokuno = props => <Select {...props}/>; 
 const Zeiku = props => <Select {...props}/>; 
-const ShoriButton = props => <Select {...props}/>; 
+const ShoriButton = props => <Submit {...props}/>; 
 const Meisai = props => <Select {...props}/>; 
 
 

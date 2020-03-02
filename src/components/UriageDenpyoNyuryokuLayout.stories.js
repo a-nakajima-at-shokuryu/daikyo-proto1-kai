@@ -1,5 +1,6 @@
 import React from 'react';
 import UriageDenpyoNyuryokuLayout, { useOptions } from './UriageDenpyoNyuryokuLayout';
+import { BottomNavigationAction } from '@material-ui/core';
 
 export default {
   title: '売上電溶入力（レイアウト）', 
@@ -96,6 +97,12 @@ export const Default = () => {
       { id: '3', name: '内税10%'}, 
     ], 
   }); 
+  const shoriButton = {
+    label: '処理', 
+    onClick: e => {
+      console.log('*** submit!! ***');
+    }, 
+  };
   return (
     <UriageDenpyoNyuryokuLayout
       {...{
@@ -115,6 +122,7 @@ export const Default = () => {
         meihenbi, 
         tokuno, 
         zeiku, 
+        shoriButton, 
       }}
     />
   );
