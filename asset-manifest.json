@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/daikyo-proto1-kai/main.3f312d552d03000cf300.bundle.js",
+    "main.js.map": "/daikyo-proto1-kai/main.3f312d552d03000cf300.bundle.js.map",
+    "runtime~main.js": "/daikyo-proto1-kai/runtime~main.3f312d552d03000cf300.bundle.js",
+    "runtime~main.js.map": "/daikyo-proto1-kai/runtime~main.3f312d552d03000cf300.bundle.js.map",
+    "vendors~main.js": "/daikyo-proto1-kai/vendors~main.3f312d552d03000cf300.bundle.js",
+    "vendors~main.js.map": "/daikyo-proto1-kai/vendors~main.3f312d552d03000cf300.bundle.js.map",
+    "iframe.html": "/daikyo-proto1-kai/iframe.html",
+    "precache-manifest.4fb25f83cf1df2c6cf0dc00ddbbbc1ac.js": "/daikyo-proto1-kai/precache-manifest.4fb25f83cf1df2c6cf0dc00ddbbbc1ac.js",
+    "service-worker.js": "/daikyo-proto1-kai/service-worker.js",
+    "vendors~main.3f312d552d03000cf300.bundle.js.LICENSE.txt": "/daikyo-proto1-kai/vendors~main.3f312d552d03000cf300.bundle.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "runtime~main.3f312d552d03000cf300.bundle.js",
+    "vendors~main.3f312d552d03000cf300.bundle.js",
+    "main.3f312d552d03000cf300.bundle.js"
+  ]
+}
