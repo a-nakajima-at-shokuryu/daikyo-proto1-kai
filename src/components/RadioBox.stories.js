@@ -8,18 +8,20 @@ export default {
   decorators: [withKnobs], 
 };
 
-const options = object(
-  'オプション', 
-  [
-    { id: 0, name: 'オプション１', }, 
-    { id: 1, name: 'オプション２', }, 
-    { id: 2, name: 'オプション３', }, 
-  ], 
-); 
+
 
 export const Default = () => {
   const [value, onChange] = useState(null);
 
+  const options = object(
+    'オプション', 
+    [
+      { id: 0, name: 'オプション１', }, 
+      { id: 1, name: 'オプション２', }, 
+      { id: 2, name: 'オプション３', }, 
+    ], 
+  ); 
+  
   return (
     <React.Fragment>
       <RadioBox 
@@ -28,7 +30,7 @@ export const Default = () => {
         label="ラジオボタン"
         options={options}
       />
-      <pre>{JSON.stringify({ value })}</pre>
+      <pre>{JSON.stringify({ value, options }, null, 2)}</pre>
     </React.Fragment>
   );
 };

@@ -7,18 +7,20 @@ export default {
   decorators: [ withKnobs ],  
 }
 
-const options = object(
-  'オプション', 
-  [
-    { id: 0, name: 'オプション１', }, 
-    { id: 1, name: 'オプション２', }, 
-    { id: 2, name: 'オプション３', }, 
-    { id: 3, name: 'オプション４', }, 
-  ], 
-)
+
 
 export const Default = () => {
   const [value, onChange] = useState(null);
+
+  const options = object(
+    'オプション', 
+    [
+      { id: 0, name: 'オプション１', }, 
+      { id: 1, name: 'オプション２', }, 
+      { id: 2, name: 'オプション３', }, 
+      { id: 3, name: 'オプション４', }, 
+    ], 
+  )
 
   return (
     <React.Fragment>

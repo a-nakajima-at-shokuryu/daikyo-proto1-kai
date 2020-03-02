@@ -20,8 +20,9 @@ const RadioBox = ({
         }}
         {...other}
       >
-        {options.map(({ id, name }) => (
+        {options.map(({ id, name }, i) => (
           <FormControlLabel 
+            key={i}
             value={id}
             control={<Radio/>}
             label={name}
